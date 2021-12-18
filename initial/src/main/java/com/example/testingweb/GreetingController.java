@@ -5,12 +5,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+
 @Controller
 public class GreetingController {
 
     private final GreetingService service;
 
-    @Autowired
     public GreetingController(GreetingService service) {
         this.service = service;
     }
@@ -19,4 +19,5 @@ public class GreetingController {
     public @ResponseBody String greeting() {
         return service.greet();
     }
+
 }
